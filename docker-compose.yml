@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  youtrack:
+    image: jetbrains/youtrack:2024.1.29548
+    ports:
+      - "8080:8080"
+    volumes:
+      - youtrack_data:/opt/youtrack/data
+      - youtrack_logs:/opt/youtrack/logs
+      - youtrack_conf:/opt/youtrack/conf
+
+volumes:
+  youtrack_data:
+  youtrack_logs:
+  youtrack_conf:
+
